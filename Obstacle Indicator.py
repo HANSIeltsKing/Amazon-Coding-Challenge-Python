@@ -1,4 +1,5 @@
 
+
 from itertools import product
 # if using the random sample of [25, 19, 3, 1, 14, 2, 28, 8, 32, 13] in the case of 6dim
 full_triangle = [[1], [2, 7], [3, 8, 13], [4, 9, 14, 19], [5, 10, 15, 20, 25], [6, 11, 16, 21, 26, 31], [12, 17, 22, 27, 32], [18, 23, 28, 33], [24, 29, 34], [30, 35], [36]]
@@ -17,6 +18,7 @@ for j in range(len(b)):
     for i in range(len(b[j]) - 1):
         if b[j][i+1] - b[j][i] > add:
             c.append(b[j])
+            
 d = []
 for i in range(len(b)):
     if b[i] not in c:
@@ -31,5 +33,8 @@ for i in range(len(a)):
         print("The " + str(i) + "th layer of the triangle is blocked, which is: " + str(full_triangle[i]))
         
         
-        
-        
+# the possible output is:    
+# []
+# 0
+# Unable to reach delivery point
+# The 9th layer of the triangle is blocked, which is: [30, 35]
